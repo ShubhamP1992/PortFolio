@@ -5,12 +5,12 @@ export default function Contact() {
     <section
   id="contact"
   style={{
-    padding: '4rem 1rem',
-    background: '#f0f0f0',
+    padding: '2rem 1rem',
+    background: '#c7c7c7',
     textAlign: 'center',
   }}
 >
-  <h2>Contact</h2>
+  <h2 style={{ color:'GrayText'}}>Contact</h2>
   <div style={{ display: 'flex', justifyContent: 'center', gap: '2rem', marginTop: '1rem' }}>
     <p>
       Email : <a href="mailto:panchalshubham1992@gmail.com">panchalshubham1992@gmail.com</a>
