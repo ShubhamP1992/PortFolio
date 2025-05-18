@@ -2,8 +2,8 @@ import React from 'react';
 
 export default function Home() {
   return (
-    <section id="home" style={{ padding: '4rem 1rem', textAlign: 'center', background: '#fff' }}>
-      <h1 className="typing-effect" style={{ fontSize: '2rem' }}>Hi, I'm Shubham Panchal</h1>
+    <section id="home" style={{ padding: '2rem 1rem', textAlign: 'center', background: '#c7c7c7' }}>
+      <h1 className="typing-effect" style={{ fontSize: '2rem', color:'GrayText' }}>Hi, I'm Shubham Panchal</h1>
       <p>.NET Core Developer | ReactJS Enthusiast</p>
 
       {/* Add style block if not using external CSS */}

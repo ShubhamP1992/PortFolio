@@ -26,8 +26,8 @@ const projects = [
 
 export default function Projects() {
   return (
-    <section id="projects" style={{ padding: '4rem 1rem', background: '#fff' }}>
-      <h2 style={{ textAlign: 'center', marginBottom: '2rem' }}>Projects</h2>
+    <section id="projects" style={{ padding: '2rem 1rem', background: '#c7c7c7' }}>
+      <h2 style={{ textAlign: 'center', marginBottom: '2rem', color:'GrayText' }}>Projects</h2>
       <div
         style={{
           display: 'grid',
