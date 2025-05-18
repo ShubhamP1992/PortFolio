@@ -11,7 +11,7 @@ const skills = {
 export default function Skills() {
   return (
     <section id="skills" style={{ padding: '4rem 1rem', background: '#f0f0f0' }}>
-      <h2 style={{ textAlign: 'center' }}>Skills</h2>
+      <h2 style={{ textAlign: 'center' }}>Key Skills</h2>
       <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center' }}>
         {Object.entries(skills).map(([category, list]) => (
           <div key={category} style={{ margin: '1rem', minWidth: '150px' }}>
