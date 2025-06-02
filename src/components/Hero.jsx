@@ -1,6 +1,6 @@
 import React from 'react';
 import { Typewriter } from 'react-simple-typewriter';
-import './hero.css';
+import './Hero.css';
 
 function Hero() {
   return (
