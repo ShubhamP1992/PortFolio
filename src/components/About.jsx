@@ -8,13 +8,12 @@ function About() {
       <div className="about-container">
         <h2>About Me</h2>
         <p>
-          I'm a passionate front-end developer with experience in building
-          responsive and interactive web applications using React. I love turning
-          creative ideas into beautiful, functional user interfaces.
+          Results-driven and detail-oriented .NET Developer with hands-on experience in designing, developing, and maintaining robust web
+          applications using C#, .NET Core, and ASP.NET MVC. Proficient in building dynamic and responsive user interfaces with JavaScript,
+          jQuery, HTML, CSS, and AJAX. Adept at implementing secure and scalable backend systems using Entity Framework and RESTful APIs.
         </p>
         <p>
-          I focus on clean code, smooth animations, and performance optimization.
-          Let's build something amazing together!
+          Experienced in integrating Keycloak for authentication and identity management, ensuring secure access control across applications.
         </p>
       </div>
     </section>
