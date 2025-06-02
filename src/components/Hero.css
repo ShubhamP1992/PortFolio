@@ -70,6 +70,32 @@
   /* remove box-shadow from here */
 }
 
+.social-links {
+  margin-top: 1rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.social-button {
+  padding: 0.5rem 1rem;
+  background-color: #0a66c2; /* LinkedIn Blue */
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+.social-button:nth-child(2) {
+  background-color: #24292e; /* GitHub Black */
+}
+
+.social-button:hover {
+  opacity: 0.9;
+}
+
+
 
 @keyframes pulseGlow {
   0% {
