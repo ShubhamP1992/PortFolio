@@ -4,13 +4,7 @@ import './Skills.css';
 
 function Skills() {
   const skillList = [
-    'HTML',
-    'CSS',
-    'JavaScript',
-    'React',
-    'Git & GitHub',
-    'APIs',
-    'Node.js',
+    'HTML', 'CSS', 'JavaScript',  'Git & GitHub', 'Node.js', 'C#' , '.NET Core', '.NET Web Api', 'ASP.NET MVC', 'ASP .NET Core', 'Entity Framework', 'SQL', 'MsSQL', 'PostgreSQL', 'JQuery', 'AJAX', 'ReactJS', 'C++', 'Source Tree', 'Jira', 'Microsoft Azure', 'KeyCloak authentication', 'Store Procedures', 'LINQ'
   ];
 
   return (
