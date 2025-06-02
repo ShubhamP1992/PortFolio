@@ -65,5 +65,21 @@
   z-index: 3;
   object-fit: contain;
   pointer-events: none;
-  transform: translate(-20%,10%);
+  animation: pulseGlow 2.5s infinite;
+  transform: translate(-20% , 0%);
+  /* remove box-shadow from here */
 }
+
+
+@keyframes pulseGlow {
+  0% {
+    filter: drop-shadow(0 0 0 rgba(0, 123, 255, 0.6));
+  }
+  50% {
+    filter: drop-shadow(0 0 15px rgba(0, 123, 255, 0.8));
+  }
+  100% {
+    filter: drop-shadow(0 0 0 rgba(0, 123, 255, 0.6));
+  }
+}
+
