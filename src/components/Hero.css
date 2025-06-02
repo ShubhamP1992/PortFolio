@@ -87,6 +87,10 @@
   transition: background-color 0.3s ease;
 }
 
+.github-icon{
+  color: var(--text-color);
+}
+
 .social-button:nth-child(2) {
   background-color: #24292e; /* GitHub Black */
 }
@@ -94,8 +98,6 @@
 .social-button:hover {
   opacity: 0.9;
 }
-
-
 
 @keyframes pulseGlow {
   0% {

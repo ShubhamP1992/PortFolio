@@ -31,7 +31,7 @@ function Hero() {
             <FaLinkedin size={24} color="#0a66c2" />
           </a>
           <a href="https://github.com/ShubhamP1992" target="_blank" rel="noopener noreferrer">
-            <FaGithub size={24} color="#000" />
+            <FaGithub size={24} className="social-icon github-icon"/>
           </a>
         </div>
 
