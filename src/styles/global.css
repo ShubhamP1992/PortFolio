@@ -10,6 +10,7 @@
   --primary-color: #0077ff;
   --gray-bg: #ffffff;
   --shadow-toggle: 0 0 10px rgba(0, 0, 0, 0.1);
+  --ring-shadow:0 0 20px rgba(0, 0, 0, 0.865);
   --card-shadow:0 4px 10px rgba(0, 0, 0, 1);
 }
 
@@ -19,6 +20,7 @@ body.dark {
   --primary-color: #00aaff;
   --gray-bg: gray;
   --shadow-toggle: 0 0 10px rgba(255, 255, 255, 0.1);
+  --ring-shadow:0 0 20px rgba(255, 255, 255, 0.893);
   --card-shadow:0 4px 10px rgba(190, 190, 190, 0.441);
 }
 
