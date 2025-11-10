@@ -1,33 +1,99 @@
 import React from 'react';
+import { motion } from 'framer-motion';
+
+const textVariants = {
+  hidden: { opacity: 0, y: 24 },
+  visible: { opacity: 1, y: 0 },
+};
 
 export default function Home() {
   return (
-    <section id="home" style={{ padding: '2rem 1rem', textAlign: 'center', background: '#c7c7c7' }}>
-      <h1 className="typing-effect" style={{ fontSize: '2rem', color:'GrayText' }}>Hi, I'm Shubham Panchal</h1>
-      <p>.NET Core Developer | ReactJS Enthusiast</p>
+    <div className="hero">
+      <div className="hero__glow" aria-hidden="true" />
 
-      {/* Add style block if not using external CSS */}
-      <style>{`
-        @keyframes typing {
-          from { width: 0; }
-          to { width: 23ch; }
-        }
-        @keyframes blinkCaret {
-          0%, 100% { border-color: transparent; }
-          50% { border-color: black; }
-        }
-        .typing-effect {
-          overflow: hidden;
-          white-space: nowrap;
-          border-right: 0.15em solid black;
-          animation:
-            typing 3s steps(23, end),
-            blinkCaret 0.75s step-end infinite;
-          width: 23ch;
-          margin: 0 auto;
-          font-family: monospace;
-        }
-      `}</style>
-    </section>
+      <motion.div
+        className="hero__badge"
+        initial={{ opacity: 0, y: -12 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6, ease: [0.4, 0, 0.2, 1] }}
+        whileHover={{ scale: 1.02 }}
+      >
+        <motion.span
+          className="hero__badge-icon"
+          aria-hidden="true"
+          initial={{ rotate: -6, scale: 0.95 }}
+          animate={{ rotate: [-6, 6, -6], scale: [0.95, 1.05, 0.95] }}
+          transition={{ duration: 4.5, repeat: Infinity, ease: 'easeInOut' }}
+        >
+          🚀
+        </motion.span>
+        <span className="hero__badge-text">
+          <span className="hero__badge-text-strong">Available for full-time opportunities</span>
+          <span className="hero__badge-text-sub">Ready to elevate enterprise .NET platforms</span>
+        </span>
+      </motion.div>
+
+      <motion.h1
+        className="hero__title"
+        variants={textVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+      >
+        Designing dependable web platforms with&nbsp;
+        <span className="hero__title-highlight">.NET</span> and crafted frontends
+      </motion.h1>
+
+      <motion.p
+        className="hero__subtitle"
+        variants={textVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        transition={{ delay: 0.1, duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+      >
+        I’m Shubham Panchal, a results-driven .NET developer focused on scalable backends, secure authentication,
+        and responsive user journeys. I love pairing optimized SQL and API design with expressive interfaces that
+        help product teams move faster.
+      </motion.p>
+
+      <motion.div
+        className="hero__cta"
+        variants={textVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        transition={{ delay: 0.2, duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+      >
+        <a href="#projects" className="button button--primary">
+          View My Work
+        </a>
+        <a href="#contact" className="button button--ghost">
+          Let’s Collaborate
+        </a>
+      </motion.div>
+
+      <div className="hero__grid">
+        {[
+          { label: 'Performance uplift delivered', value: '30%' },
+          { label: 'Manual effort automated', value: '40%' },
+          { label: 'Industry segments supported', value: '2' },
+        ].map((stat, index) => (
+          <motion.div
+            key={stat.label}
+            className="stat-card"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.1 * index, duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+          >
+            <span className="stat-card__value">{stat.value}</span>
+            <span className="stat-card__label">{stat.label}</span>
+          </motion.div>
+        ))}
+      </div>
+    </div>
   );
 }

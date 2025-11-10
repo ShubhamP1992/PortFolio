@@ -3,67 +3,85 @@ import { motion } from 'framer-motion';
 
 const projects = [
   {
-    title: '1. Aircraft Parts Management Web Application',
-    description: [
-      'Contributed to the development of an aircraft parts management web application designed to support multiple airlines by enabling detailed event tracking through CSV file uploads.',
-      'Designed and enhanced core features for event management, including part birth, installation, removal, and exchange, ensuring accurate tracking and automated generation of component history.',
-      'Implemented AJAX to enable real-time data interactions, improving responsiveness and enhancing the overall user experience.',
-      'Integrated Keycloak to implement role-based authentication and authorization, significantly enhancing application security and access control.',
-      '.NET backend development focusing on performance optimization, secure data handling, and efficient API integrations.',
+    title: 'Aircraft Parts Management Web Application',
+    context: 'Enterprise tooling for multi-airline fleets · Dexoc Solutions',
+    timeframe: '2024',
+    highlights: [
+      'Built CSV-driven event tracking that captures part birth, installation, removal, and exchange with automated component histories.',
+      'Optimized ASP.NET backend services and SQL queries to boost performance by 30% and accelerate data retrieval.',
+      'Implemented Keycloak role-based authentication to secure workflows and protect sensitive aviation data.',
     ],
+    stack: ['ASP.NET Core', 'Entity Framework', 'SQL Server', 'Keycloak', 'AJAX'],
     link: '#',
   },
   {
-    title: '2. Exam Question Paper Generator',
-    description: [
-      'Led the development of a scalable e-commerce platform focused on automating question and assignment generation, with features for real-time solution delivery and dynamic blueprint creation.',
-      'Designed and implemented customizable templates and a modular architecture, enabling efficient content generation and consistent formatting across educational materials.',
-      'Engineered a high-performance backend capable of handling large volumes of concurrent transactions, ensuring fast response times and reliable user experiences.',
+    title: 'Exam Question Paper Generator',
+    context: 'Scalable academic commerce platform · Capstone',
+    timeframe: '2023',
+    highlights: [
+      'Automated question and assignment generation with dynamic blueprint creation tailored to course requirements.',
+      'Delivered real-time solution distribution backed by modular templates for consistent formatting.',
+      'Engineered a high-performance backend capable of handling large concurrent transactions with reliable response times.',
     ],
+    stack: ['ASP.NET MVC', 'PostgreSQL', 'SQL Server', 'Azure', 'CI/CD'],
     link: '#',
   },
 ];
 
 export default function Projects() {
   return (
-    <section id="projects" style={{ padding: '2rem 1rem', background: '#c7c7c7' }}>
-      <h2 style={{ textAlign: 'center', marginBottom: '2rem', color:'GrayText' }}>Projects</h2>
-      <div
-        style={{
-          display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))',
-          gap: '1rem',
-        }}
-      >
-        {projects.map(({ title, description, link }, index) => (
-          <motion.div
-            key={title}
-            style={{
-              border: '1px solid #ccc',
-              borderRadius: '8px',
-              padding: '1rem',
-              background: '#fafafa',
-              boxShadow: '0 2px 8px rgba(0,0,0,0.05)',
-            }}
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: index * 0.2 }}
-            viewport={{ once: true }}
+    <div className="section__inner projects">
+      <div className="section__header">
+        <span className="section__eyebrow">Selected Work</span>
+        <h2 className="section__title">High-impact builds from the last few years</h2>
+        <p className="section__description">
+          I love transforming ambiguous challenges into measurable wins. Here are a few collaborations
+          that shipped meaningful results across aviation and education technology.
+        </p>
+      </div>
+
+      <div className="projects-grid">
+        {projects.map((project, index) => (
+          <motion.article
+            key={project.title}
+            className="project-card"
+            initial={{ opacity: 0, y: 30, scale: 0.98 }}
+            whileInView={{ opacity: 1, y: 0, scale: 1 }}
+            viewport={{ once: true, margin: '-120px' }}
+            transition={{ duration: 0.6, delay: index * 0.1, ease: [0.22, 1, 0.36, 1] }}
           >
-            <h3>{title}</h3>
-            <ul style={{ paddingLeft: '1.2rem', marginTop: '0.5rem' }}>
-              {description.map((point, i) => (
-                <li key={i} style={{ marginBottom: '0.5rem' }}>
-                  {point}
-                </li>
+            <div className="project-card__meta">
+              <span className="project-card__timeframe">{project.timeframe}</span>
+              <span className="project-card__context">{project.context}</span>
+            </div>
+            <h3 className="project-card__title">{project.title}</h3>
+            <ul className="project-card__list">
+              {project.highlights.map((highlight) => (
+                <li key={highlight}>{highlight}</li>
               ))}
             </ul>
-            <a href={link} target="_blank" rel="noopener noreferrer" style={{ display: 'inline-block', marginTop: '1rem', color: '#0070f3' }}>
-              View Demo
-            </a>
-          </motion.div>
+            <div className="project-card__footer">
+              <div className="project-card__stack">
+                {project.stack.map((tech) => (
+                  <span key={tech} className="chip">
+                    {tech}
+                  </span>
+                ))}
+              </div>
+
+              <motion.a
+                href={project.link}
+                className="project-card__link"
+                target="_blank"
+                rel="noreferrer"
+                whileHover={{ x: 4 }}
+              >
+                Case study ↗
+              </motion.a>
+            </div>
+          </motion.article>
         ))}
       </div>
-    </section>
+    </div>
   );
 }
